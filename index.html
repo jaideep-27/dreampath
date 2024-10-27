@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Learning Path Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Personalized Learning Path Generator</h1>
+        <form id="learning-path-form">
+            <div class="form-field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+    
+            <div class="form-field">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+    
+            <div class="form-field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+    
+            <div class="form-field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+    
+            <div class="form-field">
+                <label for="skills">Skills</label>
+                <select id="skills" name="skills" required>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="java">Java</option>
+                    <option value="csharp">C#</option>
+                    <option value="cpp">C++</option>
+                    <option value="php">PHP</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="go">Go</option>
+                    <option value="rust">Rust</option>
+                    <option value="swift">Swift</option>
+                    <option value="kotlin">Kotlin</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="sql">SQL</option>
+                    <option value="nosql">NoSQL</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="machine-learning">Machine Learning</option>
+                    <option value="ai">Artificial Intelligence</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="mobile-dev">Mobile Development</option>
+                    <option value="devops">DevOps</option>
+                    <option value="cloud-computing">Cloud Computing</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="networking">Networking</option>
+                    <option value="blockchain">Blockchain</option>
+                    <option value="game-dev">Game Development</option>
+                    <option value="ui-ux">UI/UX Design</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="content-creation">Content Creation</option>
+                    <option value="project-management">Project Management</option>
+                    <option value="business-analysis">Business Analysis</option>
+                    <option value="sales">Sales</option>
+                </select>
+            </div>
+    
+            <div class="form-field">
+                <label for="interests">Interests</label>
+                <select id="interests" name="interests" required>
+                    <option value="ai">AI</option>
+                    <option value="react">React</option>
+                    <option value="vue">Vue.js</option>
+                    <option value="angular">Angular</option>
+                    <option value="data-visualization">Data Visualization</option>
+                    <option value="big-data">Big Data</option>
+                    <option value="internet-of-things">Internet of Things (IoT)</option>
+                    <option value="machine-learning">Machine Learning</option>
+                    <option value="ethical-hacking">Ethical Hacking</option>
+                    <option value="blockchain">Blockchain Technology</option>
+                    <option value="ar-vr">Augmented Reality/Virtual Reality</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="business-intelligence">Business Intelligence</option>
+                    <option value="cloud-tech">Cloud Technologies</option>
+                    <option value="e-commerce">E-Commerce</option>
+                    <option value="social-media">Social Media Management</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="content-writing">Content Writing</option>
+                    <option value="photography">Photography</option>
+                    <option value="public-speaking">Public Speaking</option>
+                </select>
+            </div>
+    
+            <div class="form-field">
+                <label for="academicBackground">Academic Background</label>
+                <select id="academicBackground" name="academicBackground" required>
+                    <option value="high-school">High School</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="postgraduate">Postgraduate</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="information-technology">Information Technology</option>
+                    <option value="software-engineering">Software Engineering</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="business-administration">Business Administration</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="design">Design (Graphic/Web)</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="finance">Finance</option>
+                    <option value="arts">Arts</option>
+                    <option value="humanities">Humanities</option>
+                    <option value="social-sciences">Social Sciences</option>
+                    <option value="law">Law</option>
+                    <option value="environmental-science">Environmental Science</option>
+                </select>
+            </div>
+    
+            <div class="form-field full-width">
+                <label for="additionalBackground">Additional Academic Background Details</label>
+                <textarea id="additionalBackground" name="additionalBackground" rows="4" placeholder="Provide details about your academic background (e.g., courses taken, projects, etc.)"></textarea>
+            </div>
+    
+            <div class="form-field full-width">
+                <label for="goals">Career Goals</label>
+                <textarea id="goals" name="goals" rows="4" placeholder="Describe your career goals and aspirations"></textarea>
+            </div>
+    
+            <div class="form-field full-width">
+                <button type="button" onclick="generatePath()">Generate Paths</button>
+            </div>
+        </form>
+    
+        <div id="result" class="result"></div>
+        <button id="download-pdf" style="display: none;" onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
