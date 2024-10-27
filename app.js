@@ -12,7 +12,7 @@ async function generatePath() {
     };
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/generate-path', {
+        const response = await fetch('https://dreampath-backend.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ async function generatePath() {
 }
 
 async function downloadPDF() {
-    const response = await fetch('http://127.0.0.1:5000/download-pdf', {
+    const response = await fetch('https://dreampath-backend.onrender.com/download-pdf', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
